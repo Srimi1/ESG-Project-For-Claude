@@ -100,3 +100,29 @@ If you paste your survey questions instead of a methodology section:
 [paste survey questions]"
 ```
 Claude will switch to survey critique mode: checking each question for clarity, cultural fit, double-barreled language, leading questions, and response scale consistency for an Indian MSME audience.
+
+
+---
+
+## Final Step: Humanize & Export to Word
+
+After all output above is assembled, automatically run the **human-writer** skill:
+
+### Phase 1 — Humanize
+Apply the `/human` skill to the complete output:
+- Rewrite all prose to sound like a confident academic researcher, not an AI
+- Preserve all data, tables, scores, citations, and section structure exactly
+- Remove AI-typical phrasing; apply natural academic voice and hedging
+- Ensure reading level appropriate for a Q1 journal manuscript
+
+### Phase 2 — Export to Word
+Apply the `/docx` skill to save the humanized output as:
+**``**
+
+Format with: Heading styles, 12pt Times New Roman / Calibri, 1.5 line spacing,
+1-inch margins, page numbers, header with document title.
+
+### Phase 3 — Confirm Save Location
+Present the user with save options (Google Drive, Notion, local download).
+
+> This step runs automatically — no extra command needed.

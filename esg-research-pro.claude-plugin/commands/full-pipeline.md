@@ -53,9 +53,10 @@ STAGE 2 → /methods-check
   Agents: methods-agent (single)
   ⏸ CHECKPOINT: Review critical methodology issues. Confirm you want to proceed to editing.
 
-STAGE 3 → /write-review (all sections)
-  Skills: draft-editor → cite-verifier (section-level)
-  Agents: editor-agent (parallel — 1 per section, max 4) + citation-agent (targeted)
+STAGE 3 → /paper-audit → /draft-section (if needed) → /write-review (all sections)
+  Pre-check: Run /paper-audit first — any section scoring below 6/10 or missing is rebuilt with /draft-section before editing begins.
+  Skills: section-compliance-checker → [builder skills as needed] → draft-editor → cite-verifier (section-level)
+  Agents: compliance-agent (parallel) + [builder agents as needed] + editor-agent (parallel — 1 per section, max 4) + citation-agent (targeted)
   ⏸ CHECKPOINT: Review edited sections. Confirm all ⚠️ citation flags are resolved.
 
 STAGE 4 → /pre-submission

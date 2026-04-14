@@ -1,0 +1,8 @@
+{
+  "name": "esg-research-pro",
+  "version": "1.0.0",
+  "description": "A complete research pipeline plugin for academic work on ESG practices and business performance in Indian MSMEs. Includes skills for literature screening, synthesis, gap analysis, methodology review, draft editing, citation verification, journal matching, and peer review simulation.",
+  "author": {
+    "name": "ESG Research Pro"
+  }
+}
